@@ -8,7 +8,7 @@ Created on Sat Mar 14 19:18:04 2020
 
 ''' LONGEST COMMON SUBSTRING '''
 
-
+'''substring functions returns the longest substring b/w string1 and string2'''
 def substring(mat,i,j,subs):
     if i == 0 or j == 0:
         return subs[::-1]
@@ -21,6 +21,7 @@ def substring(mat,i,j,subs):
         subs += s1[j]
         return substring(mat,i-1,j,subs)
 
+''' fills the table using bottom-up approach '''
 def LCS(s1,s2):
     len1,len2 = len(s1),len(s2)
 
